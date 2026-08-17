@@ -7,11 +7,9 @@
     <title>Dream Smile Dental Website</title>
     <style>
       @media (max-width: 767px) {
-        #hq-btn {
-          bottom: 84px !important;
-        }
-        #hq-win {
-          bottom: 156px !important;
+        #voiceflow-chat,
+        [id^="voiceflow"] {
+          bottom: 70px !important;
         }
       }
     </style>
@@ -28,6 +26,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://haqera.com/widget.js" data-token="e9152a89-5b03-4844-9d10-d4ffd6ce023c"></script>
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '67fa714a2bc3d09f386845c9' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
   </body>
 </html>
