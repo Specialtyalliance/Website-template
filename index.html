@@ -28,7 +28,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://haqera.com/widget.js" data-token="8a53adef-2737-4ce2-a9da-1e55901acd09"></script>
-    <script src="https://yctmzpgeowhhvjipxzsw.supabase.co/storage/v1/object/public/Widget/widget.js" defer></script>
+    <script>
+      (function(){
+        if(document.querySelector('#hq-btn'))return;
+        var s=document.createElement('script');
+        s.src='https://yctmzpgeowhhvjipxzsw.supabase.co/storage/v1/object/public/Widget/widget.js';
+        s.setAttribute('data-token','8a53adef-2737-4ce2-a9da-1e55901acd09');
+        document.body.appendChild(s);
+      })();
+    </script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { Navbar } from './components/Navbar';
@@ -22,16 +21,6 @@ import BookAppointmentPage from './pages/BookAppointmentPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
-  useEffect(() => {
-    if (!document.querySelector('script[data-haqera-widget]')) {
-      const s = document.createElement('script');
-      s.src = 'https://yctmzpgeowhhvjipxzsw.supabase.co/storage/v1/object/public/Widget/widget.js';
-      s.setAttribute('data-haqera-widget', 'true');
-      s.defer = true;
-      document.body.appendChild(s);
-    }
-  }, []);
-
   return (
     <BrowserRouter>
       <ScrollToTop />
