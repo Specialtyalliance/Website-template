@@ -119,6 +119,12 @@ h1, h2, h3, h4, h5, h6 {
   #voiceflow-chat {
     bottom: 70px !important;
   }
+  #hq-btn {
+    bottom: 76px !important;
+  }
+  #hq-win {
+    bottom: 148px !important;
+  }
 }
 
 
