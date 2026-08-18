@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dream Smile Dental Website</title>
     <style>
+      /* Haqera widget — keep visible above other widgets */
+      #hq-btn,
+      #hq-win {
+        z-index: 2147483647 !important;
+      }
+      /* Voiceflow chat — nudge up on mobile so it doesn't overlap sticky bar */
       @media (max-width: 767px) {
         #voiceflow-chat,
         [id^="voiceflow"] {
